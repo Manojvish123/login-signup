@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+  
+  <div id="circle">
+      <div>
+        <div id="c1"></div>
+      </div>
+      <div>
+        <div id="c2"></div>
+      </div>
+      <div id="c3">
+      
+      </div>
+      <div id="c4">
+        <h2 > let's make
+          it happen together!
+        </h2>
+      </div>
+  </div>
+  
+    <div class="container">
+        <div class="title">Create an account</div>
+    
+        <div class="content">
+
+            <form action="#" onSubmit="return checkPassword(this)" >
+            <div class="user-details">
+               
+              <div class="input-box">
+                <span class="details">First Name</span>
+                <input type="text"  required>
+              </div>
+               
+              <div class="input-box">
+                <span class="details">Last Name</span>
+                <input type="text" required>
+              </div>
+
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="email" name="Email">
+              </div>
+
+              <div class="input-box">
+                <span class="details">Address</span>
+                <input type="text"  required>
+              </div>
+
+              <div class="input-box">
+                <span class="details" id="pass-input"> Create Password</span>
+                <input type="password"   name="password1">
+              </div>
+
+              <div class="input-box">
+                <span class="details" id="pass2-input">Confirm Password</span>
+                <input type="password"   name="password2">
+              </div>
+            </div>
+                <input type="checkbox" name="" id="">Creating your account and you accepting <a href="">term & conditions</a>
+
+            <div class="button">
+              <input id="bttn" type="submit" value="Create Account" required> submit</button>
+            </div>
+          </form>
+          <p>Already have an account
+            <a href="index.html">Login</a>
+          </p>
+
+        </div>
+      </div>
+      <div id="box">
+        <div id="b1"></div>
+        <div id="b2"></div>
+      </div>
+      <script>
+         
+         function checkPassword(form) {
+            password1 = form.password1.value;
+            password2 = form.password2.value;
+            Email=form.Email.value;
+
+
+            if (Email==''||Email==null){
+              alert("PLease Enter email")
+              }
+              else if(Email>6){
+                const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+          if (pattern.test(email)) {
+               alert("Email is valid! Form Submitted.");
+          } 
+          else {
+                   errMsg.textContent = "Please enter a valid email address.";
+                }
+
+              }
+            else if (password1 == '')
+                alert("Please enter Password");
+
+            else if (password2 == '')
+                alert("Please enter confirm password");
+
+            else if (password1 != password2) {
+                alert("\nPassword did not match: Please try again...")
+                return false;
+            }
+
+            else {
+                alert("Account created success fully!")
+                return true;
+            }
+        }
+
+      </script>
+</body>
+</html>
